@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " A ",
+    "BCB",
+    " D "
+  ],
+  "key": {
+    "A": { "item": "superbwarfare:seeker" },
+    "B": { "tag": "forge:ingots/iron" },
+    "C": { "item": "superbwarfare:ap_head" },
+    "D": { "item": "superbwarfare:missile_engine" }
+  },
+  "result": {
+    "item": "mcsp:tow_2",
+    "count": 1
+  }
+}

@@ -1,0 +1,372 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+MixinGradle did not locate the diffplug APT plugin, skipping eclipse task configuration
+
+> Task :downloadMcpConfig
+> Task :extractSrg UP-TO-DATE
+> Task :createMcpToSrg UP-TO-DATE
+
+> Task :compileJava
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIIModel.java:131: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIIModel.java:131: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                                              ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIIModel.java:132: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIIModel.java:136: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIIModel.java:136: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                                              ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIISandModel.java:131: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIISandModel.java:131: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                                              ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIISandModel.java:132: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIISandModel.java:136: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIISandModel.java:136: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                                              ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIModel.java:131: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIModel.java:131: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                                              ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIModel.java:132: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIModel.java:136: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIIModel.java:136: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                                              ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIISandModel.java:131: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIISandModel.java:131: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                                              ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIISandModel.java:132: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIISandModel.java:136: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3BuskIISandModel.java:136: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                                              ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3SandModel.java:131: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3SandModel.java:131: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                                              ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3SandModel.java:132: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3SandModel.java:136: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\M3A3SandModel.java:136: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                                              ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvCamoModel.java:97: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvCamoModel.java:97: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvCamoModel.java:98: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvCamoModel.java:102: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvCamoModel.java:102: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvGreenModel.java:97: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvGreenModel.java:97: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvGreenModel.java:98: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvGreenModel.java:102: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvGreenModel.java:102: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvPixelModel.java:97: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvPixelModel.java:97: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvPixelModel.java:98: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvPixelModel.java:102: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80bvPixelModel.java:102: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uCamoModel.java:97: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uCamoModel.java:97: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uCamoModel.java:98: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uCamoModel.java:102: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uCamoModel.java:102: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uGreenModel.java:97: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uGreenModel.java:97: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uGreenModel.java:98: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uGreenModel.java:102: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uGreenModel.java:102: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uKantemirModel.java:97: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uKantemirModel.java:97: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uKantemirModel.java:98: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uKantemirModel.java:102: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uKantemirModel.java:102: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uPixelModel.java:97: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uPixelModel.java:97: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uPixelModel.java:98: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uPixelModel.java:102: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T80uPixelModel.java:102: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T90aGreenModel.java:98: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T90aGreenModel.java:98: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T90aGreenModel.java:99: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T90aGreenModel.java:103: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T90aGreenModel.java:103: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T90aTricolorModel.java:97: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T90aTricolorModel.java:97: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T90aTricolorModel.java:98: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T90aTricolorModel.java:102: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\T90aTricolorModel.java:102: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\Tos1aModel.java:147: error: getDefaultWrapRange(VehicleEntity) in Tos1aModel cannot override getDefaultWrapRange(VehicleEntity) in VehicleModel
+    public int getDefaultWrapRange(com.atsuishio.superbwarfare.entity.vehicle.base.VehicleEntity vehicle) {
+               ^
+  overridden method is final
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\Tos1aModel.java:179: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\Tos1aModel.java:179: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\Tos1aModel.java:180: error: rudderRotO has private access in VehicleEntity
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
+                                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\Tos1aModel.java:185: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\Tos1aModel.java:185: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
+                                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:51: error: incompatible types: inference variable T has incompatible equality constraints IntList,List<Integer>
+    public static final EntityDataAccessor<IntList> LOADED_AMMO = SynchedEntityData.defineId(Tos1aEntity.class, ModSerializers.INT_LIST_SERIALIZER.get());
+                                                                                            ^
+  where T is a type-variable:
+    T extends Object declared in method <T>defineId(Class<? extends Entity>,EntityDataSerializer<T>)
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:154: error: method does not override or implement a method from a supertype
+    @Override
+    ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:213: error: cannot find symbol
+            return vehicle.removeItemNoUpdate(BATTERY_SLOT_START + slot);
+                          ^
+  symbol:   method removeItemNoUpdate(int)
+  location: variable vehicle of type Tos1aEntity
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:228: error: cannot find symbol
+            return vehicle.stillValid(player);
+                          ^
+  symbol:   method stillValid(@org.jetbrains.annotations.NotNull Player)
+  location: variable vehicle of type Tos1aEntity
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:247: error: cannot find symbol
+                list.add(rocketItem.type.ordinal());
+                                   ^
+  symbol:   variable type
+  location: variable rocketItem of type MlrsRocketItem
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:329: error: cannot find symbol
+                    Vec3 pos = OBB.vector3dToVec3(barrelOBB[lookingShellIndex].center());
+                                                                              ^
+  symbol:   method center()
+  location: class OBB
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:344: error: cannot find symbol
+                    Vec3 pos = OBB.vector3dToVec3(barrelOBB[lookingShellIndex].center());
+                                                                              ^
+  symbol:   method center()
+  location: class OBB
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:368: error: cannot find symbol
+            if (lookingObb.part() == OBB.Part.TURRET || lookingObb.part() == OBB.Part.INTERACTIVE) {
+                          ^
+  symbol:   method part()
+  location: variable lookingObb of type OBB
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:368: error: cannot find symbol
+            if (lookingObb.part() == OBB.Part.TURRET || lookingObb.part() == OBB.Part.INTERACTIVE) {
+                                                                  ^
+  symbol:   method part()
+  location: variable lookingObb of type OBB
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:377: error: non-static method setDriverAngle(VehicleEntity,Player) cannot be referenced from a static context
+                VehicleVecUtils.setDriverAngle(this, player);
+                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:461: error: cannot find symbol
+            barrelOBB[i].center().set(tempCenter);
+                        ^
+  symbol:   method center()
+  location: class OBB
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:462: error: cannot find symbol
+            barrelOBB[i].setRotation(rotation);
+                        ^
+  symbol:   method setRotation(Quaterniond)
+  location: class OBB
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:487: error: package com.atsuishio.superbwarfare.item.common.container does not exist
+        return List.of(com.atsuishio.superbwarfare.item.common.container.ContainerBlockItem.createInstance(this));
+                                                                        ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:522: warning: [deprecation] compute() in GunData has been deprecated
+        if (data != null && data.compute().shootPos.positions.size() > slot) {
+                                ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:522: error: shootPos has private access in DefaultGunData
+        if (data != null && data.compute().shootPos.positions.size() > slot) {
+                                          ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:522: error: positions has private access in ShootPos
+        if (data != null && data.compute().shootPos.positions.size() > slot) {
+                                                   ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:523: warning: [deprecation] compute() in GunData has been deprecated
+            var vec3 = data.compute().shootPos.positions.get(slot);
+                           ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:523: error: shootPos has private access in DefaultGunData
+            var vec3 = data.compute().shootPos.positions.get(slot);
+                                     ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:523: error: positions has private access in ShootPos
+            var vec3 = data.compute().shootPos.positions.get(slot);
+                                              ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:525: warning: [deprecation] compute() in GunData has been deprecated
+                    this.getTransformFromString(data.compute().shootPos.transform, ticks),
+                                                    ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:525: error: shootPos has private access in DefaultGunData
+                    this.getTransformFromString(data.compute().shootPos.transform, ticks),
+                                                              ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:525: error: transform has private access in ShootPos
+                    this.getTransformFromString(data.compute().shootPos.transform, ticks),
+                                                                       ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:541: error: cannot find symbol
+        items.set(currentShootSlot, ItemStack.EMPTY);
+        ^
+  symbol:   variable items
+  location: class Tos1aEntity
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:544: error: cannot find symbol
+        var barrelAnim = entityData.get(BARREL_ANIM).toIntArray();
+                                                    ^
+  symbol:   method toIntArray()
+  location: interface List<Integer>
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:546: warning: [deprecation] compute() in GunData has been deprecated
+            barrelAnim[currentShootSlot] = data.compute().shootAnimationTime;
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\entity\Tos1aEntity.java:546: error: shootAnimationTime has private access in DefaultGunData
+            barrelAnim[currentShootSlot] = data.compute().shootAnimationTime;
+                                                         ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\Zbd04aGreenModel.java:171: error: leftWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                               ^
+C:\osnowa\minecraft_mods_make\MCSPAddon\src\main\java\tech\mcsp\mcsp\client\model\Zbd04aGreenModel.java:171: error: rightWheelRot has private access in VehicleModel
+                    bone.setRotX(1.5f * (isL ? leftWheelRot : rightWheelRot));
+                                                              ^
+100 errors
+4 warnings
+only showing the first 100 errors, of 113 total; use -Xmaxerrs if you would like to see more
+
+> Task :compileJava FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.8/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 19s
+4 actionable tasks: 2 executed, 2 up-to-date

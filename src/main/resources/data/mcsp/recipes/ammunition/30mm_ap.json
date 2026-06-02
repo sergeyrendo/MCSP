@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " A ",
+    "BCB",
+    " D "
+  ],
+  "key": {
+    "A": { "item": "superbwarfare:ap_head" },
+    "B": { "tag": "forge:ingots/steel" },
+    "C": { "item": "superbwarfare:high_energy_explosives" },
+    "D": { "item": "superbwarfare:grain" }
+  },
+  "result": {
+    "item": "mcsp:30mm_ap",
+    "count": 16
+  }
+}

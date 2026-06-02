@@ -1,0 +1,9 @@
+{
+  "ID": "mcsp:humvee_standart_camo",
+  "Model": {
+    "Model": "mcsp:geo/humvee.geo.json",
+    "LODModel": ["mcsp:geo/vehicle_lod/humvee_lod1.geo.json"],
+    "Texture": "mcsp:textures/entity/humvee_green.png"
+  },
+  "LODDistance": [23]
+}

@@ -1,0 +1,9 @@
+{
+  "ID": "mcsp:t80u_green",
+  "Model": {
+    "Model": "mcsp:geo/t80_u.geo.json",
+    "LODModel": ["mcsp:geo/vehicle_lod/t80_u_lod1.geo.json"],
+    "Texture": "mcsp:textures/entity/t80_green.png"
+  },
+  "LODDistance": [23]
+}

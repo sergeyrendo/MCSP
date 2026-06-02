@@ -1,0 +1,9 @@
+{
+  "ID": "mcsp:typhoon_tricolor_30",
+  "Model": {
+    "Model": "mcsp:geo/typhoon_30mm.geo.json",
+    "LODModel": ["mcsp:geo/vehicle_lod/typhoon_30mm_lod1.geo.json"],
+    "Texture": "mcsp:textures/entity/typhoon_tricolor_30.png"
+  },
+  "LODDistance": [23]
+}

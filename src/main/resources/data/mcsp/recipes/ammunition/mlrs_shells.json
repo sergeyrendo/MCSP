@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " A ",
+    "BCB",
+    " D "
+  ],
+  "key": {
+    "A": { "item": "superbwarfare:fusee" },
+    "B": { "tag": "forge:ingots/iron" },
+    "C": { "item": "superbwarfare:high_energy_explosives" },
+    "D": { "item": "superbwarfare:grain" }
+  },
+  "result": {
+    "item": "mcsp:mlrs_shells",
+    "count": 4
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "A",
+    "B",
+    "C"
+  ],
+  "key": {
+    "A": { "item": "superbwarfare:ap_head" },
+    "B": { "item": "superbwarfare:grain" },
+    "C": { "item": "superbwarfare:fusee" }
+  },
+  "result": {
+    "item": "mcsp:125mm_ap",
+    "count": 1
+  }
+}

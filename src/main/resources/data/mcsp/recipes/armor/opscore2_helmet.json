@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "a": {
+      "tag": "superbwarfare:ingots/steel"
+    },
+    "b": {
+      "tag": "forge:dyes/gray"
+    },
+    "c": {
+      "item": "superbwarfare:armor_plate"
+    }
+  },
+  "pattern": [
+    "aca",
+    "aba"
+  ],
+  "result": {
+    "item": "mcsp:opscore2_helmet"
+  }
+}

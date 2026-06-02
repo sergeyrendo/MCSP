@@ -1,0 +1,210 @@
+{
+  "ID": "mcsp:humvee_carc",
+  "Type": "Car",
+  "camo_group": {
+    "primary": "mcsp:humvee_carc_spawn_item",
+    "side": "western",
+    "variants": [
+      "mcsp:humvee_sand_spawn_item",
+      "mcsp:humvee_standart_spawn_item"
+    ]
+  },
+  "MaxHealth": 150,
+  "MaxEnergy": 5000000,
+  "Mass": 4.5,
+  "UpStep": 1.5,
+  "RotateOffsetHeight": 2.2,
+
+  "OBB": [
+    {
+      "Part": "WheelLeft",
+      "Size": [0.1875, 0.5625, 0.5625],
+      "Position": [1.1171875, 0.5625, 2.15625]
+    },
+    {
+      "Part": "WheelLeft",
+      "Size": [0.1875, 0.5625, 0.5625],
+      "Position": [1.1171875, 0.5625, -1.781]
+    },
+    {
+      "Part": "WheelRight",
+      "Size": [0.1875, 0.5625, 0.5625],
+      "Position": [-1.1171875, 0.5625, 2.15625]
+    },
+    {
+      "Part": "WheelRight",
+      "Size": [0.1875, 0.5625, 0.5625],
+      "Position": [-1.1171875, 0.5625, -1.781]
+    },
+    {
+      "Size": [1.3135, 0.875, 1.1885],
+      "Position": [0, 1.375, 0.0635]
+    },
+    {
+      "Size": [1.3135, 0.3135, 0.7815],
+      "Position": [0, 1.125, 2.0315]
+    },
+    {
+      "Size": [1.3135, 0.5, 0.755],
+      "Position": [0, 1.3135, -1.875]
+    },
+    {
+      "Part": "Turret",
+      "Size": [0.375, 0.375, 0.375],
+      "Position": [0, 0.5, 0.05625],
+      "Transform": "Turret",
+      "Rotation": "Turret"
+    }
+  ],
+
+  "Seats": [
+    {
+      "IsEnclosed": true,
+      "Transform": "Vehicle",
+      "Position": [0.9, 0.2, 0.4],
+      "MinPitch": -21,
+      "MaxPitch": 60,
+      "Sensitivity": [0.75, 0.8, 1],
+      "CameraPos": {
+        "Transform": "Barrel",
+        "UseFixedCameraPos": true,
+        "Position": [0.5, 0.5, -0.5],
+        "ZoomPosition": [0.5, 0.5, 4.5],
+        "Direction": "Barrel"
+      },
+      "Weapons": ["MachineGun"]
+    },
+    {
+      "IsEnclosed": true,
+      "Transform": "Vehicle",
+      "Position": [-0.9, 0.2, 0.4]
+    },
+    {
+      "IsEnclosed": true,
+      "Transform": "Vehicle",
+      "Position": [0.9, 0.2, -0.8]
+    },
+    {
+      "IsEnclosed": true,
+      "Transform": "Vehicle",
+      "Position": [-0.9, 0.2, -0.8]
+    }
+  ],
+
+  "Weapons": {
+    "MachineGun": {
+      "Name": "50.BMG M2 BROWNING",
+      "Icon": "mcsp:textures/icon_gun/12.7mm.png",
+      "DefaultFireMode": "Auto",
+      "AvailableFireModes": "Auto",
+      "Projectile": "superbwarfare:projectile",
+      "AmmoType": "mcsp:bullet762",
+      "RPM": 450,
+      "Velocity": 25,
+      "Damage": 40,
+      "BypassesArmor": 0.2,
+      "Spread": 0.25,
+      "HeatPerShoot": 5,
+      "NaturalCooldown": 1,
+      "RecoilTime": 20,
+      "RecoilForce": 0.1,
+      "ShootAnimationTime": 1,
+      "Crosshair": "@VehicleDynamicCross",
+      "CrosshairZooming": "@VehicleCommonGun",
+      "CrosshairColor": "0xFFC700",
+      "SoundRadius": 16,
+      "SoundInfo": {
+        "Fire1P": "superbwarfare:m_2_hb_fire_1p",
+        "Fire3P": "superbwarfare:m_2_hb_fire_3p",
+        "Fire3PFar": "superbwarfare:m_2_hb_far",
+        "Fire3PVeryFar": "superbwarfare:m_2_hb_veryfar",
+        "Change": "superbwarfare:into_cannon"
+      },
+      "ShootPos": {
+        "Transform": "Barrel",
+        "Positions": [[0, -0.015625, 1.5625]],
+        "Directions": ["Barrel"]
+      }
+    }
+  },
+
+  "TurretPos": [0, 2.3125, 0.9125],
+  "TurretTurnSpeed": [25, 25],
+  "TurretPitchRange": [-21, 60],
+  "BarrelPos": [-0.03125, 0.75, -0.0625],
+
+  "EngineType": "Wheel",
+  "EngineInfo": {
+    "Buoyancy": 0.0,
+    "EnergyCostRate": 64,
+    "WheelRotSpeed": 0.75,
+    "WheelDifferential": 0.3,
+    "MaxForwardSpeedRate": 1,
+    "MaxBackwardSpeedRate": 0.5,
+    "Increment": 0.03,
+    "Decrement": 0.02,
+    "SteeringSpeed": 0.07
+  },
+  "EngineSound": "mcsp:taifun_engine",
+  "HornSound": "superbwarfare:truck_horn",
+
+  "DamageModifiers": [
+    "minecraft:lava - -11",
+    "minecraft:lava * 10",
+    "All * 0.2",
+    "minecraft:arrow * 1.5",
+    "minecraft:trident * 1.5",
+    "minecraft:mob_attack * 2.5",
+    "minecraft:mob_attack_no_aggro * 2",
+    "minecraft:mob_projectile * 1.5",
+    "minecraft:explosion * 6",
+    "minecraft:player_explosion * 6",
+    "superbwarfare:custom_explosion * 2.0",
+    "superbwarfare:projectile_explosion * 2",
+    "superbwarfare:mine * 0.75",
+    "superbwarfare:projectile_hit * 1.25",
+    "superbwarfare:grapeshot_hit * 0.3",
+    "superbwarfare:laser * 1.25",
+    "@#superbwarfare:aerial_bomb * 3",
+    "#superbwarfare:projectile * 0.25",
+    "#superbwarfare:projectile_absolute * 0.85",
+    "superbwarfare:vehicle_strike * 4",
+    "@superbwarfare:mortar_shell * 1.25",
+    "@superbwarfare:gun_grenade * 1.5",
+    "@superbwarfare:javelin_missile * 0.8",
+    "@#superbwarfare:aa_missile * 0.75",
+    "All - 11"
+  ],
+
+  "DestroyInfo": {
+    "ParticleType": "Huge",
+    "ExplosionDamage": 32,
+    "ExplosionRadius": 4
+  },
+
+  "CollisionLevel": {
+    "Level": 4,
+    "PowerLimits": [
+      [0, 0, true],
+      [0, 0, true],
+      [0.15, 0.09, false],
+      [1, 0.3, false]
+    ]
+  },
+
+  "TerrainCompat": [
+    [1.125, 0, 2.1875],
+    [-1.125, 0, 2.1875],
+    [1.125, 0, -1.8125],
+    [-1.125, 0, -1.8125]
+  ],
+  "InertiaRotateRate": 0.3,
+
+  "HasDecoy": true,
+  "ThirdPersonCameraPos": [0, 2, 3],
+  "HudType": "@Land",
+  "HUDColor": "0xFFC700",
+  "VehicleIcon": "mcsp:textures/vehicle_icon/humvee_icon.png",
+  "ContainerIcon": "superbwarfare:textures/gui/vehicle/type/land.png",
+  "VehicleContainerType": "Medium"
+}

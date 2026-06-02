@@ -1,0 +1,9 @@
+{
+  "ID": "mcsp:t80bv_kantemir",
+  "Model": {
+    "Model": "mcsp:geo/t80_bv.geo.json",
+    "LODModel": ["mcsp:geo/vehicle_lod/t80_bv_lod1.geo.json"],
+    "Texture": "mcsp:textures/entity/t80_kantemir.png"
+  },
+  "LODDistance": [23]
+}

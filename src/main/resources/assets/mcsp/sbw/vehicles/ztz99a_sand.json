@@ -1,0 +1,7 @@
+{
+  "ID": "mcsp:ztz99a_sand",
+  "Model": {
+    "Model": "mcsp:geo/ztz99.geo.json",
+    "Texture": "mcsp:textures/entity/ztz99a_sand.png"
+  }
+}

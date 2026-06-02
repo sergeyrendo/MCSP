@@ -1,0 +1,9 @@
+{
+  "ID": "mcsp:m3a3_bradley_busk_ii",
+  "Model": {
+    "Model": "mcsp:geo/m3a3_busk_ii.geo.json",
+    "LODModel": ["mcsp:geo/vehicle_lod/m3a3_busk_ii_lod1.geo.json"],
+    "Texture": "mcsp:textures/entity/m3a3_texture.png"
+  },
+  "LODDistance": [23]
+}
