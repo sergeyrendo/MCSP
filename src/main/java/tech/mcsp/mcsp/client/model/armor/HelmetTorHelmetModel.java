@@ -8,12 +8,12 @@ import tech.mcsp.mcsp.item.armor.HelmetTorHelmetItem;
 public class HelmetTorHelmetModel extends GeoModel<HelmetTorHelmetItem> {
     @Override
     public ResourceLocation getModelResource(HelmetTorHelmetItem object) {
-        return new ResourceLocation(MCSP.MOD_ID, "geo/helmettor_helmet.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(MCSP.MOD_ID, "geo/helmettor_helmet.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(HelmetTorHelmetItem object) {
-        return new ResourceLocation(MCSP.MOD_ID, "textures/armor/texture_armour.png");
+        return ResourceLocation.fromNamespaceAndPath(MCSP.MOD_ID, "textures/armor/texture_armour.png");
     }
 
     @Override

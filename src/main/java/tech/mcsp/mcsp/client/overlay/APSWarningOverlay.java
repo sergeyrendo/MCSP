@@ -1,25 +1,23 @@
 package tech.mcsp.mcsp.client.overlay;
 
 import com.atsuishio.superbwarfare.entity.vehicle.base.VehicleEntity;
+import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.gui.overlay.ForgeGui;
-import net.minecraftforge.client.gui.overlay.IGuiOverlay;
-import tech.mcsp.mcsp.MCSP;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class APSWarningOverlay implements IGuiOverlay {
+public final class APSWarningOverlay {
+    private static Component message;
+    private static long showTime;
+    private static int duration;
 
-    public static final String ID = MCSP.MOD_ID + "_aps_warning";
-
-    private static Component message = null;
-    private static long showTime = 0;
-    private static int duration = 0;
+    private APSWarningOverlay() {
+    }
 
     public static void show(Component msg, int durationTicks) {
         message = msg;
@@ -27,9 +25,10 @@ public class APSWarningOverlay implements IGuiOverlay {
         duration = durationTicks * 50;
     }
 
-    @Override
-    public void render(ForgeGui gui, GuiGraphics guiGraphics, float partialTick, int screenWidth, int screenHeight) {
-        if (message == null) return;
+    public static void render(GuiGraphics guiGraphics, DeltaTracker deltaTracker) {
+        if (message == null) {
+            return;
+        }
 
         long elapsed = System.currentTimeMillis() - showTime;
         if (elapsed > duration) {
@@ -37,20 +36,23 @@ public class APSWarningOverlay implements IGuiOverlay {
             return;
         }
 
-        Player player = gui.getMinecraft().player;
-        if (player == null) return;
-        if (!(player.getVehicle() instanceof VehicleEntity)) return;
+        Minecraft minecraft = Minecraft.getInstance();
+        Player player = minecraft.player;
+        if (player == null || !(player.getVehicle() instanceof VehicleEntity)) {
+            return;
+        }
 
         float progress = (float) elapsed / duration;
         float alpha = Mth.clamp(1.0f - progress, 0.0f, 1.0f);
 
-        int textWidth = Minecraft.getInstance().font.width(message);
+        int screenWidth = guiGraphics.guiWidth();
+        int screenHeight = guiGraphics.guiHeight();
+        int textWidth = minecraft.font.width(message);
         int x = (screenWidth - textWidth) / 2;
         int y = screenHeight / 2 + 30;
 
-        int baseColor = 0xFFFFFF;
         guiGraphics.setColor(1.0f, 1.0f, 1.0f, alpha);
-        guiGraphics.drawString(Minecraft.getInstance().font, message, x, y, baseColor, false);
+        guiGraphics.drawString(minecraft.font, message, x, y, 0xFFFFFF, false);
         guiGraphics.setColor(1.0f, 1.0f, 1.0f, 1.0f);
     }
 }

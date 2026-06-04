@@ -6,11 +6,11 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import tech.mcsp.mcsp.MCSP;
 import tech.mcsp.mcsp.item.VehicleSpawnItem;
 import tech.mcsp.mcsp.init.ModItems;
@@ -32,7 +32,7 @@ public class ModTabs {
 
 
     // Вкладка с транспортом MCSP
-    public static final RegistryObject<CreativeModeTab> VEHICLES = TABS.register("mcsp_vehicle_tab",
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> VEHICLES = TABS.register("mcsp_vehicle_tab",
             () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(ModVehicleItems.TYPHOON_TRICOLOR_30_SPAWN_ITEM.get())) // Используем один
                     // из предметов как
@@ -115,7 +115,7 @@ public class ModTabs {
                     .build());
 
     // Вкладка с броней MCSP
-    public static final RegistryObject<CreativeModeTab> ARMOR = TABS.register("mcsp_armor_tab",
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ARMOR = TABS.register("mcsp_armor_tab",
             () -> CreativeModeTab.builder()
                     .icon(() -> new ItemStack(ModItems.AIRFRAME_HELMET.get()))
                     .title(Component.translatable("item_group.mcsp.armor"))
@@ -133,7 +133,7 @@ public class ModTabs {
     /**
      * Event for adding items to creative tabs
      */
-    @Mod.EventBusSubscriber(modid = MCSP.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    @EventBusSubscriber(modid = MCSP.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
     public static class Registration {
         @SubscribeEvent
         public static void register(BuildCreativeModeTabContentsEvent event) {

@@ -11,8 +11,6 @@ import com.atsuishio.superbwarfare.init.ModTags;
 import tech.mcsp.mcsp.item.MlrsRocketItem;
 import com.atsuishio.superbwarfare.tools.OBB;
 import com.atsuishio.superbwarfare.tools.VectorTool;
-import tech.mcsp.mcsp.init.MCSPMenuTypes;
-import tech.mcsp.mcsp.menu.Tos1aMenu;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -21,18 +19,16 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Container;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.util.FakePlayer;
+import net.neoforged.neoforge.common.util.FakePlayer;
 import org.joml.Matrix4d;
 import org.joml.Quaterniond;
 import org.joml.Vector3d;
@@ -101,13 +97,13 @@ public class Tos1aEntity extends ArtilleryEntity {
     }
 
     @Override
-    protected void defineSynchedData() {
-        super.defineSynchedData();
+    protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData.Builder builder) {
+        super.defineSynchedData(builder);
         List<Integer> list = new ArrayList<>(SHELL_COUNT);
         for (int i = 0; i < SHELL_COUNT; i++) {
             list.add(-1); // -1 означает что слот визуально пуст
         }
-        this.entityData.define(LOADED_AMMO, list);
+        builder.define(LOADED_AMMO, list);
     }
 
     @Override
@@ -136,57 +132,27 @@ public class Tos1aEntity extends ArtilleryEntity {
         syncAmmoFromItems();
     }
 
-    public static final int BATTERY_SLOT_START = SHELL_COUNT;
-    public static final int BATTERY_SLOT_COUNT = 9;
+    @Override
+    public int getContainerSize() {
+        return SHELL_COUNT;
+    }
 
-    public int getContainerSize() { return SHELL_COUNT + BATTERY_SLOT_COUNT; }
-    public int getMaxStackSize() { return 64; }
+    @Override
+    public int getMaxStackSize() {
+        return 1;
+    }
 
     public boolean canPlaceItem(int slot, @NotNull ItemStack stack) {
-        if (slot < BATTERY_SLOT_START) return false;
-        return stack.getCapability(ForgeCapabilities.ENERGY).isPresent();
+        return false;
     }
 
     public boolean canTakeItem(@NotNull Container target, int slot, @NotNull ItemStack stack) {
-        if (slot < BATTERY_SLOT_START) return false;
-        return true;
+        return false;
     }
 
-    public boolean hasMenu() { return true; }
-
-    @Nullable
-    public AbstractContainerMenu createMenu(int pContainerId, Inventory pPlayerInventory, Player pPlayer) {
-        if (!pPlayer.isSpectator()) {
-            return new Tos1aMenu(MCSPMenuTypes.TOS1A_MENU.get(), pContainerId, pPlayerInventory,
-                    new Tos1aBatteryContainer(this));
-        }
-        return null;
-    }
-
-    public static class Tos1aBatteryContainer implements Container {
-        private final Tos1aEntity vehicle;
-        public Tos1aBatteryContainer(Tos1aEntity vehicle) { this.vehicle = vehicle; }
-        @Override public int getContainerSize() { return BATTERY_SLOT_COUNT; }
-        @Override public boolean isEmpty() {
-            for (int i = 0; i < BATTERY_SLOT_COUNT; i++) {
-                if (!getItem(i).isEmpty()) return false;
-            }
-            return true;
-        }
-        @Override public @NotNull ItemStack getItem(int slot) { return vehicle.getItem(BATTERY_SLOT_START + slot); }
-        @Override public @NotNull ItemStack removeItem(int slot, int amount) { return vehicle.removeItem(BATTERY_SLOT_START + slot, amount); }
-        @Override public @NotNull ItemStack removeItemNoUpdate(int slot) {
-            ItemStack stack = getItem(slot);
-            if (stack.isEmpty()) return ItemStack.EMPTY;
-            setItem(slot, ItemStack.EMPTY);
-            return stack;
-        }
-        @Override public void setItem(int slot, @NotNull ItemStack stack) { vehicle.setItem(BATTERY_SLOT_START + slot, stack); }
-        @Override public void setChanged() { vehicle.setChanged(); }
-        @Override public boolean stillValid(@NotNull Player player) { return vehicle.isAlive() && vehicle.distanceToSqr(player) < 64.0; }
-        @Override public void clearContent() {
-            for (int i = 0; i < BATTERY_SLOT_COUNT; i++) setItem(i, ItemStack.EMPTY);
-        }
+    @Override
+    public boolean hasMenu() {
+        return false;
     }
 
     private List<Integer> buildLoadedAmmoList() {
@@ -202,20 +168,77 @@ public class Tos1aEntity extends ArtilleryEntity {
         return list;
     }
 
-    public void syncAmmoFromItems() {
-        entityData.set(LOADED_AMMO, buildLoadedAmmoList());
-
+    public int countLoadedShells() {
+        if (level().isClientSide) {
+            int loadedCount = 0;
+            for (int value : entityData.get(LOADED_AMMO)) {
+                if (value >= 0) {
+                    loadedCount++;
+                }
+            }
+            return loadedCount;
+        }
         int loadedCount = 0;
         for (int i = 0; i < SHELL_COUNT; i++) {
-            if (!getItem(i).isEmpty()) loadedCount++;
+            if (!getItem(i).isEmpty()) {
+                loadedCount++;
+            }
         }
-        final int count = loadedCount;
+        return loadedCount;
+    }
+
+    public void syncAmmoFromItems() {
+        if (level().isClientSide) {
+            return;
+        }
+        entityData.set(LOADED_AMMO, buildLoadedAmmoList());
+        final int count = countLoadedShells();
         modifyGunData("TOS", data -> data.ammo.set(count));
+        modifyGunData(0, data -> data.ammo.set(count));
+    }
+
+    @Override
+    public int getAmmoCount(@NotNull String weaponName) {
+        if ("TOS".equals(weaponName)) {
+            return countLoadedShells();
+        }
+        return super.getAmmoCount(weaponName);
+    }
+
+    @Override
+    public int getAmmoCount(@NotNull LivingEntity living) {
+        if (living.getVehicle() == this) {
+            return countLoadedShells();
+        }
+        return super.getAmmoCount(living);
+    }
+
+    @Override
+    public int getAmmo(@Nullable GunData gunData) {
+        int loaded = countLoadedShells();
+        if (loaded > 0) {
+            return loaded;
+        }
+        return super.getAmmo(gunData);
+    }
+
+    @Override
+    public boolean canShoot(@NotNull LivingEntity living) {
+        if (countLoadedShells() <= 0) {
+            return false;
+        }
+        if (!level().isClientSide) {
+            syncAmmoFromItems();
+        }
+        return super.canShoot(living);
     }
 
     @Override
     public void setChanged() {
-        syncAmmoFromItems();
+        if (!level().isClientSide) {
+            syncAmmoFromItems();
+            super.setChanged();
+        }
     }
 
     @Override
@@ -225,7 +248,7 @@ public class Tos1aEntity extends ArtilleryEntity {
 
         if (player.isShiftKeyDown() && stack.is(ModTags.Items.TOOLS_CROWBAR) && this.getPassengers().isEmpty()) {
             for (var item : getRetrieveItems()) {
-                net.minecraftforge.items.ItemHandlerHelper.giveItemToPlayer(player, item);
+                net.neoforged.neoforge.items.ItemHandlerHelper.giveItemToPlayer(player, item);
             }
             this.remove(RemovalReason.DISCARDED);
             this.discard();
@@ -233,20 +256,16 @@ public class Tos1aEntity extends ArtilleryEntity {
         }
 
         // Используем метод мода для получения точного OBB, на который смотрит игрок (работает безупречно)
-        double reach = player.getEntityReach();
+        double reach = player.entityInteractionRange();
         OBB lookingObb = OBB.getLookingObb(player, reach);
-        int lookingShellIndex = -1;
+        int lookingShellIndex = resolveBarrelShellIndex(lookingObb);
 
-        if (lookingObb != null) {
-            for (int i = 0; i < SHELL_COUNT; i++) {
-                if (lookingObb == barrelOBB[i]) {
-                    lookingShellIndex = i;
-                    break;
-                }
+        // Заряжание: прицел на слот ствола или первый свободный слот при клике по машине
+        if (stack.getItem() instanceof MlrsRocketItem && interactCooldown == 0) {
+            if (lookingShellIndex < 0) {
+                lookingShellIndex = findFirstEmptyShellSlot();
             }
         }
-
-        // Заряжание ракеты (если игрок смотрит прямо на ствол и держит ракету)
         if (stack.getItem() instanceof MlrsRocketItem && interactCooldown == 0 && lookingShellIndex >= 0) {
             if (getItem(lookingShellIndex).isEmpty()) {
                 if (level() instanceof ServerLevel serverLevel) {
@@ -257,9 +276,10 @@ public class Tos1aEntity extends ArtilleryEntity {
                     Vector3d c = barrelOBB[lookingShellIndex].center;
                     serverLevel.playSound(null, c.x, c.y, c.z, ModSounds.TYPE_63_RELOAD.get(), SoundSource.PLAYERS, 1f, random.nextFloat() * 0.1f + 0.9f);
                     interactCooldown = 5;
-                    setChanged(); // Это обновит визуальную модель
+                    setChanged();
+                    player.swing(InteractionHand.MAIN_HAND);
+                    return InteractionResult.SUCCESS;
                 }
-                player.swing(InteractionHand.MAIN_HAND);
                 return InteractionResult.SUCCESS;
             }
         }
@@ -274,8 +294,9 @@ public class Tos1aEntity extends ArtilleryEntity {
                     interactCooldown = 5;
                     setItem(lookingShellIndex, ItemStack.EMPTY);
                     setChanged();
+                    player.swing(InteractionHand.MAIN_HAND);
+                    return InteractionResult.SUCCESS;
                 }
-                player.swing(InteractionHand.MAIN_HAND);
                 return InteractionResult.SUCCESS;
             }
         }
@@ -312,6 +333,14 @@ public class Tos1aEntity extends ArtilleryEntity {
         }
 
         return InteractionResult.PASS;
+    }
+
+    @Override
+    protected void addPassenger(@NotNull Entity passenger) {
+        super.addPassenger(passenger);
+        if (!level().isClientSide) {
+            syncAmmoFromItems();
+        }
     }
 
     @Override
@@ -362,13 +391,31 @@ public class Tos1aEntity extends ArtilleryEntity {
 
         for (int i = 0; i < SHELL_COUNT; i++) {
             transformPositionInto(transform, OBB_POSITIONS[i][0], OBB_POSITIONS[i][1], OBB_POSITIONS[i][2], tempWorldPos);
-            barrelOBB[i] = new OBB(
-                    new Vector3d(tempWorldPos.x, tempWorldPos.y, tempWorldPos.z),
-                    halfSize,
-                    rotation,
-                    OBB.Part.INTERACTIVE
-            );
+            barrelOBB[i].setCenter(new Vector3d(tempWorldPos.x, tempWorldPos.y, tempWorldPos.z));
+            barrelOBB[i].updateRotation(rotation);
         }
+    }
+
+    private int findFirstEmptyShellSlot() {
+        for (int i = 0; i < SHELL_COUNT; i++) {
+            if (getItem(i).isEmpty()) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    private int resolveBarrelShellIndex(@Nullable OBB lookingObb) {
+        if (lookingObb == null || lookingObb.part != OBB.Part.INTERACTIVE) {
+            return -1;
+        }
+        for (int i = 0; i < SHELL_COUNT; i++) {
+            OBB shellObb = barrelOBB[i];
+            if (shellObb != null && (lookingObb == shellObb || lookingObb.equals(shellObb))) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     private void transformPositionInto(Matrix4d transform, double x, double y, double z, Vector4d dest) {
@@ -436,9 +483,6 @@ public class Tos1aEntity extends ArtilleryEntity {
         currentShootSlot = getFirstLoadedSlot();
         if (currentShootSlot < 0) return;
 
-        setItem(currentShootSlot, ItemStack.EMPTY);
-        entityData.set(LOADED_AMMO, buildLoadedAmmoList());
-
         List<Integer> barrelAnimList = entityData.get(BARREL_ANIM);
         int[] barrelAnim = new int[barrelAnimList.size()];
         for(int i = 0; i < barrelAnimList.size(); i++) barrelAnim[i] = barrelAnimList.get(i);
@@ -453,7 +497,14 @@ public class Tos1aEntity extends ArtilleryEntity {
 
     @Override
     public void afterShoot(GunData gunData, Vec3 shootVec) {
-        super.afterShoot(gunData, shootVec);
+        if (currentShootSlot >= 0 && !level().isClientSide && gunData != null) {
+            // SBW списывает ammo только при реальном выстреле — не убираем ракету при сбое/overheat
+            if (super.getAmmo(gunData) < countLoadedShells()) {
+                setItem(currentShootSlot, ItemStack.EMPTY);
+                syncAmmoFromItems();
+            }
+        }
         currentShootSlot = -1;
+        super.afterShoot(gunData, shootVec);
     }
 }

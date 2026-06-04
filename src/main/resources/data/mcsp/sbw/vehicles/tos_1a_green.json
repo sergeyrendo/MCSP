@@ -98,7 +98,7 @@
       "AmmoType": "mcsp:mlrs_shells",
       "AmmoCostPerShoot": 1,
       "Magazine": 21,
-      "EmptyReloadTime": 60,
+      "EmptyReloadTime": 0,
       "DefaultZoom": 2,
       "RPM": 200,
       "Velocity": 7,
@@ -221,5 +221,5 @@
   "HudType": "@Land",
   "HUDColor": "0xFFC700",
   "VehicleIcon": "mcsp:textures/vehicle_icon/tos1_icon.png",
-  "ContainerIcon": "superbwarfare:textures/gui/vehicle/type/land.png"
+  "VehicleContainerType": "Empty"
 }

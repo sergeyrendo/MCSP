@@ -8,12 +8,12 @@ import tech.mcsp.mcsp.item.armor.VestCPCItem;
 public class VestCPCModel extends GeoModel<VestCPCItem> {
     @Override
     public ResourceLocation getModelResource(VestCPCItem object) {
-        return new ResourceLocation(MCSP.MOD_ID, "geo/vest_cpc.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(MCSP.MOD_ID, "geo/vest_cpc.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(VestCPCItem object) {
-        return new ResourceLocation(MCSP.MOD_ID, "textures/armor/texture_armour.png");
+        return ResourceLocation.fromNamespaceAndPath(MCSP.MOD_ID, "textures/armor/texture_armour.png");
     }
 
     @Override

@@ -8,7 +8,7 @@ import tech.mcsp.mcsp.entity.Tos1aEntity;
 
 import java.util.regex.Pattern;
 
-//import static tech.mcsp.mcsp.entity.Tos1aEntity.LOADED_AMMO;
+import static tech.mcsp.mcsp.entity.Tos1aEntity.LOADED_AMMO;
 
 public class Tos1aModel<T extends Tos1aEntity> extends VehicleModel<T> {
 
@@ -28,7 +28,8 @@ public class Tos1aModel<T extends Tos1aEntity> extends VehicleModel<T> {
 
     @Override
     public boolean hideForTurretControllerWhileZooming() {
-        return true;
+        // true скрывает кости ствола (shell0–shell20) в режиме стрелка — ракеты «пропадают» при посадке
+        return false;
     }
 
     // 61 keyframes from track builder export (TOS-1A, 60 tracks)
@@ -152,41 +153,18 @@ public class Tos1aModel<T extends Tos1aEntity> extends VehicleModel<T> {
     private static final java.util.regex.Pattern WHEEL_PATTERN = 
         java.util.regex.Pattern.compile("^wheel(?<direction>[LR]).*$");
     
-//    @Override
-//    public @Nullable TransformContext<T> collectTransform(String boneName) {
-//        // Shell visibility
-//        var matcher = SHELL_PATTERN.matcher(boneName);
-//        if (matcher.matches()) {
-//            final int shellIndex = Integer.parseInt(matcher.group("id"));
-//            return (bone, vehicle, state) -> {
-//                var items = vehicle.getEntityData().get(LOADED_AMMO);
-//                if (shellIndex < items.size()) {
-//                    bone.setHidden(items.getInt(shellIndex) == -1);
-//                }
-//            };
-//        }
-//
-//        // Override wheel handling - swap L/R to match inverted X axis
-//        var wheelMatcher = WHEEL_PATTERN.matcher(boneName);
-//        if (wheelMatcher.matches()) {
-//            // L in model name -> use RIGHT wheel value (inverted)
-//            // R in model name -> use LEFT wheel value (inverted)
-//            var isL = wheelMatcher.group("direction").equals("L");
-//
-//            if (boneName.endsWith("Turn")) {
-//                return (bone, vehicle, state) -> {
-//                    // Use opposite side wheel rotation
-//                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
-//                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
-//                };
-//            } else {
-//                return (bone, vehicle, state) -> {
-//                    // Use opposite side wheel rotation
-//                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
-//                };
-//            }
-//        }
-//
-//        return super.collectTransform(boneName);
-//    }
+    @Override
+    public @Nullable TransformContext<T> collectTransform(String boneName) {
+        var matcher = SHELL_PATTERN.matcher(boneName);
+        if (matcher.matches()) {
+            final int shellIndex = Integer.parseInt(matcher.group("id"));
+            return (bone, vehicle, state) -> {
+                var items = vehicle.getEntityData().get(LOADED_AMMO);
+                if (shellIndex < items.size()) {
+                    bone.setHidden(items.get(shellIndex) == -1);
+                }
+            };
+        }
+        return super.collectTransform(boneName);
+    }
 }

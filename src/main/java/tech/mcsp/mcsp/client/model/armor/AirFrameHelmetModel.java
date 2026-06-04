@@ -9,13 +9,13 @@ public class AirFrameHelmetModel extends GeoModel<AirFrameHelmetItem> {
     @Override
     public ResourceLocation getModelResource(AirFrameHelmetItem object) {
         // имя файла модели в нижнем регистре
-        return new ResourceLocation(MCSP.MOD_ID, "geo/airframe_helmet.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(MCSP.MOD_ID, "geo/airframe_helmet.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(AirFrameHelmetItem object) {
         // текстура в assets/mcsp/textures/armor/texture_armour.png
-        return new ResourceLocation(MCSP.MOD_ID, "textures/armor/texture_armour.png");
+        return ResourceLocation.fromNamespaceAndPath(MCSP.MOD_ID, "textures/armor/texture_armour.png");
     }
 
     @Override

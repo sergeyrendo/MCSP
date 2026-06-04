@@ -8,16 +8,16 @@ import tech.mcsp.mcsp.entity.T80bvKantemirEntity;
 public class T80bvKantemirModel extends GeoModel<T80bvKantemirEntity> {
     @Override
     public ResourceLocation getModelResource(T80bvKantemirEntity entity) {
-        return new ResourceLocation(MCSP.MOD_ID, "geo/t80_bv.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(MCSP.MOD_ID, "geo/t80_bv.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(T80bvKantemirEntity entity) {
-        return new ResourceLocation(MCSP.MOD_ID, "textures/entity/t80_kantemir.png");
+        return ResourceLocation.fromNamespaceAndPath(MCSP.MOD_ID, "textures/entity/t80_kantemir.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(T80bvKantemirEntity entity) {
-        return new ResourceLocation(MCSP.MOD_ID, "animations/t80_bv.animation.json");
+        return ResourceLocation.fromNamespaceAndPath(MCSP.MOD_ID, "animations/t80_bv.animation.json");
     }
 }

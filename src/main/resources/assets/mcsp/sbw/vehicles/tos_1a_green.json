@@ -3,7 +3,7 @@
   "Model": {
     "Model": "mcsp:geo/tos-1a.geo.json",
     "LODModel": ["mcsp:geo/vehicle_lod/tos_1a_lod1.geo.json"],
-    "Texture": "mcsp:textures/entity/t90a.png"
+    "Texture": "mcsp:textures/entity/tos1a.png"
   },
   "LODDistance": [23]
 }

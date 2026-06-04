@@ -8,12 +8,12 @@ import tech.mcsp.mcsp.item.armor.OpsCore2HelmetItem;
 public class OpsCore2HelmetModel extends GeoModel<OpsCore2HelmetItem> {
     @Override
     public ResourceLocation getModelResource(OpsCore2HelmetItem object) {
-        return new ResourceLocation(MCSP.MOD_ID, "geo/opscore2_helmet.geo.json");
+        return ResourceLocation.fromNamespaceAndPath(MCSP.MOD_ID, "geo/opscore2_helmet.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(OpsCore2HelmetItem object) {
-        return new ResourceLocation(MCSP.MOD_ID, "textures/armor/texture_armour.png");
+        return ResourceLocation.fromNamespaceAndPath(MCSP.MOD_ID, "textures/armor/texture_armour.png");
     }
 
     @Override
