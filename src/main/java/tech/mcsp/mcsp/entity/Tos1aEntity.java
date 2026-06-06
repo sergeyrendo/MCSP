@@ -255,17 +255,10 @@ public class Tos1aEntity extends ArtilleryEntity {
             return InteractionResult.SUCCESS;
         }
 
-        // Используем метод мода для получения точного OBB, на который смотрит игрок (работает безупречно)
         double reach = player.entityInteractionRange();
         OBB lookingObb = OBB.getLookingObb(player, reach);
-        int lookingShellIndex = resolveBarrelShellIndex(lookingObb);
+        int lookingShellIndex = getLookingShellIndex(player);
 
-        // Заряжание: прицел на слот ствола или первый свободный слот при клике по машине
-        if (stack.getItem() instanceof MlrsRocketItem && interactCooldown == 0) {
-            if (lookingShellIndex < 0) {
-                lookingShellIndex = findFirstEmptyShellSlot();
-            }
-        }
         if (stack.getItem() instanceof MlrsRocketItem && interactCooldown == 0 && lookingShellIndex >= 0) {
             if (getItem(lookingShellIndex).isEmpty()) {
                 if (level() instanceof ServerLevel serverLevel) {
@@ -396,26 +389,32 @@ public class Tos1aEntity extends ArtilleryEntity {
         }
     }
 
-    private int findFirstEmptyShellSlot() {
-        for (int i = 0; i < SHELL_COUNT; i++) {
-            if (getItem(i).isEmpty()) {
-                return i;
-            }
-        }
-        return -1;
-    }
+    public int getLookingShellIndex(Player player) {
+        double reach = player.entityInteractionRange();
+        Vec3 eyePos = player.getEyePosition();
+        Vec3 endPos = eyePos.add(player.getLookAngle().scale(reach));
 
-    private int resolveBarrelShellIndex(@Nullable OBB lookingObb) {
-        if (lookingObb == null || lookingObb.part != OBB.Part.INTERACTIVE) {
-            return -1;
-        }
+        Vector3d start = new Vector3d(eyePos.x, eyePos.y, eyePos.z);
+        Vector3d end = new Vector3d(endPos.x, endPos.y, endPos.z);
+
+        double closestDist = Double.MAX_VALUE;
+        int closestIndex = -1;
+
         for (int i = 0; i < SHELL_COUNT; i++) {
-            OBB shellObb = barrelOBB[i];
-            if (shellObb != null && (lookingObb == shellObb || lookingObb.equals(shellObb))) {
-                return i;
+            if (barrelOBB[i] == null) {
+                continue;
+            }
+            var hit = barrelOBB[i].clip(start, end);
+            if (hit.isPresent()) {
+                double dist = hit.get().distanceSquared(start);
+                if (dist < closestDist) {
+                    closestDist = dist;
+                    closestIndex = i;
+                }
             }
         }
-        return -1;
+
+        return closestIndex;
     }
 
     private void transformPositionInto(Matrix4d transform, double x, double y, double z, Vector4d dest) {
