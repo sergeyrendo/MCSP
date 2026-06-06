@@ -8,7 +8,7 @@ import tech.mcsp.mcsp.entity.Tos1aEntity;
 
 import java.util.regex.Pattern;
 
-//import static tech.mcsp.mcsp.entity.Tos1aEntity.LOADED_AMMO;
+import static tech.mcsp.mcsp.entity.Tos1aEntity.LOADED_AMMO;
 
 public class Tos1aModel<T extends Tos1aEntity> extends VehicleModel<T> {
 
@@ -18,24 +18,27 @@ public class Tos1aModel<T extends Tos1aEntity> extends VehicleModel<T> {
     public ResourceLocation getModelResource(T vehicle) {
         ResourceLocation model = super.getModelResource(vehicle);
         if (lastModel != null && !lastModel.equals(model)) {
-            // Model changed - parent class will handle reinitialization
+            resetTransformCache();
         }
         lastModel = model;
         return model;
     }
 
+    private void resetTransformCache() {
+        setInit(false);
+        getTRANSFORMS().clear();
+    }
+
     private static final Pattern SHELL_PATTERN = Pattern.compile("^shell(?<id>\\d+)$");
+    private static final Pattern WHEEL_PATTERN = Pattern.compile("^wheel(?<direction>[LR]).*$");
 
     @Override
     public boolean hideForTurretControllerWhileZooming() {
-        return true;
+        return false;
     }
 
-    // 61 keyframes from track builder export (TOS-1A, 60 tracks)
-    // Each value is [rotX, posY, posZ] from JSON
     private static final int TRACK_COUNT = 60;
     private static final int MAX_IDX = 60;
-    // Keyframes from Track Builder export (with getPointAtArcLength smoothing)
     private static final float[][] KEYFRAMES = {
         {176.94f, 19.50f, 47.00f},
         {143.28f, 18.21f, 50.72f},
@@ -100,12 +103,9 @@ public class Tos1aModel<T extends Tos1aEntity> extends VehicleModel<T> {
         {176.94f, 19.50f, 47.00f}
     };
 
-    // Starting position (keyframe 0) - used as reference for relative offsets
     private static final float START_Y = 19.50f;
     private static final float START_Z = 47.00f;
 
-    // t ranges from 0 to wrapRange, maps to keyframe index 0-MAX_IDX
-    // Use linear interpolation
     private float getKeyframeValue(float t, int component) {
         int wrapRange = TRACK_COUNT * 2;
         float normalized = (t / wrapRange) * MAX_IDX;
@@ -116,7 +116,6 @@ public class Tos1aModel<T extends Tos1aEntity> extends VehicleModel<T> {
         float p1 = KEYFRAMES[idx1][component];
         float p2 = KEYFRAMES[idx2][component];
 
-        // For rotation (component 0), unwrap angles to avoid ±180° discontinuity
         if (component == 0) {
             float diff = p2 - p1;
             if (diff > 180f) p2 -= 360f;
@@ -133,60 +132,41 @@ public class Tos1aModel<T extends Tos1aEntity> extends VehicleModel<T> {
 
     @Override
     public float getBoneMoveY(float t) {
-        // Return offset from starting position
         return getKeyframeValue(t, 1) - START_Y;
     }
 
     @Override
     public float getBoneMoveZ(float t) {
-        // Return offset from starting position
         return getKeyframeValue(t, 2) - START_Z;
     }
 
-//    @Override
-//    public int getDefaultWrapRange(com.atsuishio.superbwarfare.entity.vehicle.base.VehicleEntity vehicle) {
-//        return TRACK_COUNT * 2; // 120
-//    }
+    @Override
+    public @Nullable TransformContext<T> collectTransform(String boneName) {
+        var shellMatcher = SHELL_PATTERN.matcher(boneName);
+        if (shellMatcher.matches()) {
+            final int shellIndex = Integer.parseInt(shellMatcher.group("id"));
+            return (bone, vehicle, state) -> {
+                var items = vehicle.getEntityData().get(LOADED_AMMO);
+                if (shellIndex < items.size()) {
+                    bone.setHidden(items.get(shellIndex) == -1);
+                }
+            };
+        }
 
-    // Pattern for wheels - override to swap L/R
-    private static final java.util.regex.Pattern WHEEL_PATTERN = 
-        java.util.regex.Pattern.compile("^wheel(?<direction>[LR]).*$");
-    
-//    @Override
-//    public @Nullable TransformContext<T> collectTransform(String boneName) {
-//        // Shell visibility
-//        var matcher = SHELL_PATTERN.matcher(boneName);
-//        if (matcher.matches()) {
-//            final int shellIndex = Integer.parseInt(matcher.group("id"));
-//            return (bone, vehicle, state) -> {
-//                var items = vehicle.getEntityData().get(LOADED_AMMO);
-//                if (shellIndex < items.size()) {
-//                    bone.setHidden(items.getInt(shellIndex) == -1);
-//                }
-//            };
-//        }
-//
-//        // Override wheel handling - swap L/R to match inverted X axis
-//        var wheelMatcher = WHEEL_PATTERN.matcher(boneName);
-//        if (wheelMatcher.matches()) {
-//            // L in model name -> use RIGHT wheel value (inverted)
-//            // R in model name -> use LEFT wheel value (inverted)
-//            var isL = wheelMatcher.group("direction").equals("L");
-//
-//            if (boneName.endsWith("Turn")) {
-//                return (bone, vehicle, state) -> {
-//                    // Use opposite side wheel rotation
-//                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
-//                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
-//                };
-//            } else {
-//                return (bone, vehicle, state) -> {
-//                    // Use opposite side wheel rotation
-//                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
-//                };
-//            }
-//        }
-//
-//        return super.collectTransform(boneName);
-//    }
+        var wheelMatcher = WHEEL_PATTERN.matcher(boneName);
+        if (wheelMatcher.matches()) {
+            boolean isL = wheelMatcher.group("direction").equals("L");
+            if (boneName.endsWith("Turn")) {
+                return (bone, vehicle, state) -> {
+                    bone.setRotX(1.5f * (isL ? getRightWheelRot() : getLeftWheelRot()));
+                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.getRudderRotO(), vehicle.getRudderRot()));
+                };
+            }
+            return (bone, vehicle, state) -> {
+                bone.setRotX(1.5f * (isL ? getRightWheelRot() : getLeftWheelRot()));
+            };
+        }
+
+        return super.collectTransform(boneName);
+    }
 }

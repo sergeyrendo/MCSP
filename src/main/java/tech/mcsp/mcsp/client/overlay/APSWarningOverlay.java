@@ -15,6 +15,7 @@ import tech.mcsp.mcsp.MCSP;
 @OnlyIn(Dist.CLIENT)
 public class APSWarningOverlay implements IGuiOverlay {
 
+    public static final APSWarningOverlay INSTANCE = new APSWarningOverlay();
     public static final String ID = MCSP.MOD_ID + "_aps_warning";
 
     private static Component message = null;
