@@ -50,25 +50,25 @@ public class ModTabs {
                         output.accept(ModItems.AMMO_125MM_HE.get());
                         output.accept(ModItems.TOW_2.get());
                         output.accept(ModItems.MLRS_SHELLS.get());
-                        // Crafting Components
-                        output.accept(ModItems.ARMOR_PLATE.get());
-                        output.accept(ModItems.BASE_CARTRIDGE.get());
-                        output.accept(ModItems.BLOWTORCH.get());
-                        output.accept(ModItems.CIRCUIT.get());
-                        output.accept(ModItems.COPPER_WIRE.get());
-                        output.accept(ModItems.EXPLOSIVES.get());
-                        output.accept(ModItems.FUZE_IMPACT.get());
-                        output.accept(ModItems.FUZE_PROXY.get());
-                        output.accept(ModItems.HEADLIGHT.get());
-                        output.accept(ModItems.IR_SENSOR.get());
-                        output.accept(ModItems.METAL_TUBE.get());
-                        output.accept(ModItems.PLASTIC.get());
-                        output.accept(ModItems.PLATING.get());
-                        output.accept(ModItems.PROCESSOR.get());
-                        output.accept(ModItems.REPAIR_KIT.get());
-                        output.accept(ModItems.SMALL_ARMS_CARTRIDGE.get());
-                        output.accept(ModItems.SPARK_PLUG.get());
-                        output.accept(ModItems.SPRING.get());
+//                        // Crafting Components
+//                        output.accept(ModItems.ARMOR_PLATE.get());
+//                        output.accept(ModItems.BASE_CARTRIDGE.get());
+//                        output.accept(ModItems.BLOWTORCH.get());
+//                        output.accept(ModItems.CIRCUIT.get());
+//                        output.accept(ModItems.COPPER_WIRE.get());
+//                        output.accept(ModItems.EXPLOSIVES.get());
+//                        output.accept(ModItems.FUZE_IMPACT.get());
+//                        output.accept(ModItems.FUZE_PROXY.get());
+//                        output.accept(ModItems.HEADLIGHT.get());
+//                        output.accept(ModItems.IR_SENSOR.get());
+//                        output.accept(ModItems.METAL_TUBE.get());
+//                        output.accept(ModItems.PLASTIC.get());
+//                        output.accept(ModItems.PLATING.get());
+//                        output.accept(ModItems.PROCESSOR.get());
+//                        output.accept(ModItems.REPAIR_KIT.get());
+//                        output.accept(ModItems.SMALL_ARMS_CARTRIDGE.get());
+//                        output.accept(ModItems.SPARK_PLUG.get());
+//                        output.accept(ModItems.SPRING.get());
                         // Vehicles
                         output.accept(ModVehicleItems.TYPHOON_TRICOLOR_30_SPAWN_ITEM.get());
                         output.accept(ModVehicleItems.TYPHOON_30_SPAWN_ITEM.get());

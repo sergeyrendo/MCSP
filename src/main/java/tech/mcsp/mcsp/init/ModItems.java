@@ -41,25 +41,25 @@ public class ModItems {
     public static final RegistryObject<Item> TOW_2 = ITEMS.register("tow_2", () -> new AmmoItem(new Item.Properties().stacksTo(8)));
     public static final RegistryObject<Item> MLRS_SHELLS = ITEMS.register("mlrs_shells", MlrsRocketItem::new);
 
-    // Crafting Components
-    public static final RegistryObject<Item> ARMOR_PLATE = ITEMS.register("armorplate", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> BASE_CARTRIDGE = ITEMS.register("basecartridge", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> BLOWTORCH = ITEMS.register("blowtorch", () -> new CraftingItem(new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> CIRCUIT = ITEMS.register("circuit", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copperwire", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> EXPLOSIVES = ITEMS.register("explosives", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> FUZE_IMPACT = ITEMS.register("fuzeimpact", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> FUZE_PROXY = ITEMS.register("fuzeproxy", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> HEADLIGHT = ITEMS.register("headlight", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> IR_SENSOR = ITEMS.register("irsensor", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> METAL_TUBE = ITEMS.register("metaltube", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> PLASTIC = ITEMS.register("plastic", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> PLATING = ITEMS.register("plating", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> PROCESSOR = ITEMS.register("processor", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> REPAIR_KIT = ITEMS.register("repairkit", () -> new CraftingItem(new Item.Properties().stacksTo(16)));
-    public static final RegistryObject<Item> SMALL_ARMS_CARTRIDGE = ITEMS.register("smallarmscartridge", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> SPARK_PLUG = ITEMS.register("sparkplug", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final RegistryObject<Item> SPRING = ITEMS.register("spring", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    // Crafting Components
+//    public static final RegistryObject<Item> ARMOR_PLATE = ITEMS.register("armorplate", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> BASE_CARTRIDGE = ITEMS.register("basecartridge", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> BLOWTORCH = ITEMS.register("blowtorch", () -> new CraftingItem(new Item.Properties().stacksTo(16)));
+//    public static final RegistryObject<Item> CIRCUIT = ITEMS.register("circuit", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copperwire", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> EXPLOSIVES = ITEMS.register("explosives", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> FUZE_IMPACT = ITEMS.register("fuzeimpact", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> FUZE_PROXY = ITEMS.register("fuzeproxy", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> HEADLIGHT = ITEMS.register("headlight", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> IR_SENSOR = ITEMS.register("irsensor", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> METAL_TUBE = ITEMS.register("metaltube", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> PLASTIC = ITEMS.register("plastic", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> PLATING = ITEMS.register("plating", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> PROCESSOR = ITEMS.register("processor", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> REPAIR_KIT = ITEMS.register("repairkit", () -> new CraftingItem(new Item.Properties().stacksTo(16)));
+//    public static final RegistryObject<Item> SMALL_ARMS_CARTRIDGE = ITEMS.register("smallarmscartridge", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> SPARK_PLUG = ITEMS.register("sparkplug", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final RegistryObject<Item> SPRING = ITEMS.register("spring", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

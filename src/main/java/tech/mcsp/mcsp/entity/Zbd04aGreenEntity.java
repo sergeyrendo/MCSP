@@ -10,4 +10,5 @@ public class Zbd04aGreenEntity extends GeoVehicleEntity {
     public Zbd04aGreenEntity(EntityType<Zbd04aGreenEntity> type, Level world) {
         super(type, world);
     }
+
 }
