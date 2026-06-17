@@ -41,24 +41,24 @@ public class ModItems {
     public static final DeferredHolder<Item, ? extends Item> MLRS_SHELLS = ITEMS.register("mlrs_shells", MlrsRocketItem::new);
 
     // Crafting Components
-    public static final DeferredHolder<Item, ? extends Item> ARMOR_PLATE = ITEMS.register("armorplate", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> BASE_CARTRIDGE = ITEMS.register("basecartridge", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> BLOWTORCH = ITEMS.register("blowtorch", () -> new CraftingItem(new Item.Properties().stacksTo(16)));
-    public static final DeferredHolder<Item, ? extends Item> CIRCUIT = ITEMS.register("circuit", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> COPPER_WIRE = ITEMS.register("copperwire", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> EXPLOSIVES = ITEMS.register("explosives", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> FUZE_IMPACT = ITEMS.register("fuzeimpact", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> FUZE_PROXY = ITEMS.register("fuzeproxy", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> HEADLIGHT = ITEMS.register("headlight", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> IR_SENSOR = ITEMS.register("irsensor", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> METAL_TUBE = ITEMS.register("metaltube", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> PLASTIC = ITEMS.register("plastic", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> PLATING = ITEMS.register("plating", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> PROCESSOR = ITEMS.register("processor", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> REPAIR_KIT = ITEMS.register("repairkit", () -> new CraftingItem(new Item.Properties().stacksTo(16)));
-    public static final DeferredHolder<Item, ? extends Item> SMALL_ARMS_CARTRIDGE = ITEMS.register("smallarmscartridge", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> SPARK_PLUG = ITEMS.register("sparkplug", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
-    public static final DeferredHolder<Item, ? extends Item> SPRING = ITEMS.register("spring", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> ARMOR_PLATE = ITEMS.register("armorplate", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> BASE_CARTRIDGE = ITEMS.register("basecartridge", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> BLOWTORCH = ITEMS.register("blowtorch", () -> new CraftingItem(new Item.Properties().stacksTo(16)));
+//    public static final DeferredHolder<Item, ? extends Item> CIRCUIT = ITEMS.register("circuit", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> COPPER_WIRE = ITEMS.register("copperwire", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> EXPLOSIVES = ITEMS.register("explosives", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> FUZE_IMPACT = ITEMS.register("fuzeimpact", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> FUZE_PROXY = ITEMS.register("fuzeproxy", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> HEADLIGHT = ITEMS.register("headlight", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> IR_SENSOR = ITEMS.register("irsensor", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> METAL_TUBE = ITEMS.register("metaltube", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> PLASTIC = ITEMS.register("plastic", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> PLATING = ITEMS.register("plating", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> PROCESSOR = ITEMS.register("processor", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> REPAIR_KIT = ITEMS.register("repairkit", () -> new CraftingItem(new Item.Properties().stacksTo(16)));
+//    public static final DeferredHolder<Item, ? extends Item> SMALL_ARMS_CARTRIDGE = ITEMS.register("smallarmscartridge", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> SPARK_PLUG = ITEMS.register("sparkplug", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
+//    public static final DeferredHolder<Item, ? extends Item> SPRING = ITEMS.register("spring", () -> new CraftingItem(new Item.Properties().stacksTo(64)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
