@@ -9,11 +9,7 @@ import java.util.regex.Pattern;
 
 public class T80bvCamoModel extends VehicleModel<T80bvCamoEntity> {
 
-    private ResourceLocation lastModel = null;
-
-
-
-    private static final int TRACK_COUNT = 60;
+    public static final int TRACK_COUNT = 60;
     private static final int MAX_IDX = 60;
     private static final float[][] KEYFRAMES = {
         {176.94f, 19.50f, 47.00f}, {143.28f, 18.21f, 50.72f}, {104.12f, 14.89f, 52.83f},
@@ -77,7 +73,6 @@ public class T80bvCamoModel extends VehicleModel<T80bvCamoEntity> {
         return getKeyframeValue(t, 2) - START_Z;
     }
 
-    private static final Pattern WHEEL_PATTERN = Pattern.compile("^wheel(?<direction>[LR]).*$");
 
 
 }

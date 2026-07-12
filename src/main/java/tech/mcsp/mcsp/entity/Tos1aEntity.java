@@ -31,6 +31,7 @@ import org.joml.Matrix4d;
 import org.joml.Quaterniond;
 import org.joml.Vector3d;
 import org.joml.Vector4d;
+import tech.mcsp.mcsp.client.model.Tos1aModel;
 import tech.mcsp.mcsp.item.MlrsRocketItem;
 
 import java.util.ArrayList;
@@ -490,5 +491,10 @@ public class Tos1aEntity extends ArtilleryEntity {
         }
         currentShootSlot = -1;
         super.afterShoot(gunData, shootVec);
+    }
+
+    @Override
+    public int getTrackAnimationLength() {
+        return Tos1aModel.TRACK_COUNT * 2;
     }
 }

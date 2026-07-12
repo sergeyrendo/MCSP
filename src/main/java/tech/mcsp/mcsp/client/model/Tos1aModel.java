@@ -37,7 +37,7 @@ public class Tos1aModel<T extends Tos1aEntity> extends VehicleModel<T> {
         return false;
     }
 
-    private static final int TRACK_COUNT = 60;
+    public static final int TRACK_COUNT = 60;
     private static final int MAX_IDX = 60;
     private static final float[][] KEYFRAMES = {
         {176.94f, 19.50f, 47.00f},

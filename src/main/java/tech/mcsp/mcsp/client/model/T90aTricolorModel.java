@@ -13,7 +13,7 @@ public class T90aTricolorModel extends VehicleModel<T90aTricolorEntity> {
 
 
 
-    private static final int TRACK_COUNT = 60;
+    public static final int TRACK_COUNT = 60;
     private static final int MAX_IDX = 60;
     private static final float[][] KEYFRAMES = {
         {176.94f, 19.50f, 47.00f}, {143.28f, 18.21f, 50.72f}, {104.12f, 14.89f, 52.83f},

@@ -9,11 +9,7 @@ import java.util.regex.Pattern;
 
 public class T80bvGreenModel extends VehicleModel<T80bvGreenEntity> {
 
-    private ResourceLocation lastModel = null;
-
-
-
-    private static final int TRACK_COUNT = 60;
+    public static final int TRACK_COUNT = 60;
     private static final int MAX_IDX = 60;
     private static final float[][] KEYFRAMES = {
         {176.94f, 19.50f, 47.00f}, {143.28f, 18.21f, 50.72f}, {104.12f, 14.89f, 52.83f},
@@ -77,24 +73,4 @@ public class T80bvGreenModel extends VehicleModel<T80bvGreenEntity> {
         return getKeyframeValue(t, 2) - START_Z;
     }
 
-    private static final Pattern WHEEL_PATTERN = Pattern.compile("^wheel(?<direction>[LR]).*$");
-
-//    @Override
-//    public TransformContext<T80bvGreenEntity> collectTransform(String boneName) {
-//        var wheelMatcher = WHEEL_PATTERN.matcher(boneName);
-//        if (wheelMatcher.matches()) {
-//            var isL = wheelMatcher.group("direction").equals("L");
-//            if (boneName.endsWith("Turn")) {
-//                return (bone, vehicle, state) -> {
-//                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
-//                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
-//                };
-//            } else {
-//                return (bone, vehicle, state) -> {
-//                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
-//                };
-//            }
-//        }
-//        return super.collectTransform(boneName);
-//    }
 }

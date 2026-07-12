@@ -9,19 +9,7 @@ import java.util.regex.Pattern;
 
 public class Ztz99aSandModel extends VehicleModel<Ztz99aSandEntity> {
 
-    private ResourceLocation lastModel = null;
-
-//    @Override
-//    public ResourceLocation getModelResource(Ztz99aSandEntity vehicle) {
-//        ResourceLocation model = super.getModelResource(vehicle);
-//        if (lastModel != null && !lastModel.equals(model)) {
-//            // Model changed - parent class will handle reinitialization
-//        }
-//        lastModel = model;
-//        return model;
-//    }
-
-    private static final int TRACK_COUNT = 68;
+    public static final int TRACK_COUNT = 68;
     private static final int MAX_IDX = 68;
     private static final float[][] KEYFRAMES = {
         {178.07f, 22.00f, 56.50f}, {147.52f, 20.89f, 60.27f}, {112.55f, 17.92f, 62.86f},
@@ -87,24 +75,4 @@ public class Ztz99aSandModel extends VehicleModel<Ztz99aSandEntity> {
         return getKeyframeValue(t, 2) - START_Z;
     }
 
-    private static final Pattern WHEEL_PATTERN = Pattern.compile("^wheel(?<direction>[LR]).*$");
-
-//    @Override
-//    public TransformContext<Ztz99aSandEntity> collectTransform(String boneName) {
-//        var wheelMatcher = WHEEL_PATTERN.matcher(boneName);
-//        if (wheelMatcher.matches()) {
-//            var isL = wheelMatcher.group("direction").equals("L");
-//            if (boneName.endsWith("Turn")) {
-//                return (bone, vehicle, state) -> {
-//                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
-//                    bone.setRotY(Mth.lerp(state.getPartialTick(), vehicle.rudderRotO, vehicle.getRudderRot()));
-//                };
-//            } else {
-//                return (bone, vehicle, state) -> {
-//                    bone.setRotX(1.5f * (isL ? rightWheelRot : leftWheelRot));
-//                };
-//            }
-//        }
-//        return super.collectTransform(boneName);
-//    }
 }

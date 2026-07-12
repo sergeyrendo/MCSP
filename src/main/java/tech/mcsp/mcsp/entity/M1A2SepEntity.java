@@ -4,6 +4,7 @@ import com.atsuishio.superbwarfare.entity.vehicle.base.GeoVehicleEntity;
 import com.atsuishio.superbwarfare.entity.vehicle.damage.DamageModifier;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
+import tech.mcsp.mcsp.client.model.M1A2SepModel;
 
 public class M1A2SepEntity extends GeoVehicleEntity {
 
@@ -11,5 +12,9 @@ public class M1A2SepEntity extends GeoVehicleEntity {
         super(type, world);
     }
 
+    @Override
+    public int getTrackAnimationLength() {
+        return M1A2SepModel.TRACK_COUNT * 2;
+    }
 
 }
