@@ -1,19 +1,16 @@
+
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "superbwarfare:vehicle_assembling",
   "category": "misc",
-  "pattern": [
-    " A ",
-    "BCB",
-    " D "
+  "inputs": [
+    "forge:ingots/steel",
+    "forge:plates/copper",
+    "minecraft:gunpowder",
+    "superbwarfare:primer"
   ],
-  "key": {
-    "A": { "tag": "forge:ingots/steel" },
-    "B": { "tag": "forge:plates/copper" },
-    "C": { "item": "minecraft:gunpowder" },
-    "D": { "item": "superbwarfare:primer" }
-  },
   "result": {
-    "item": "mcsp:bullet762",
+    "item": "mcsp:bullet672",
     "count": 32
   }
 }
+

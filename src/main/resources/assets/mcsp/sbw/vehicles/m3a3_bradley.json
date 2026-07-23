@@ -2,8 +2,6 @@
   "ID": "mcsp:m3a3_bradley",
   "Model": {
     "Model": "mcsp:geo/m3a3.geo.json",
-    "LODModel": ["mcsp:geo/vehicle_lod/m3a3_lod1.geo.json"],
     "Texture": "mcsp:textures/entity/m3a3_texture.png"
-  },
-  "LODDistance": [23]
+  }
 }

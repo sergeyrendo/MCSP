@@ -3,8 +3,6 @@
   "Model": {
     "Animation": "mcsp:animations/lav.animation.json",
     "Model": "mcsp:geo/bmd_4.geo.json",
-    "LODModel": ["mcsp:geo/vehicle_lod/bmd_4_lod1.geo.json"],
     "Texture": "mcsp:textures/entity/bmd_4_green.png"
-  },
-  "LODDistance": [23]
+  }
 }

@@ -1,19 +1,15 @@
+
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "superbwarfare:vehicle_assembling",
   "category": "misc",
-  "pattern": [
-    " A ",
-    "BCB",
-    " D "
+  "inputs": [
+    "superbwarfare:tungsten_rod",
+    "2 #forge:ingots/copper",
+    "minecraft:gunpowder",
+    "superbwarfare:primer"
   ],
-  "key": {
-    "A": { "item": "superbwarfare:ap_head" },
-    "B": { "tag": "forge:ingots/steel" },
-    "C": { "item": "superbwarfare:high_energy_explosives" },
-    "D": { "item": "superbwarfare:grain" }
-  },
   "result": {
     "item": "mcsp:30mm_ap",
-    "count": 16
+    "count": 8
   }
 }

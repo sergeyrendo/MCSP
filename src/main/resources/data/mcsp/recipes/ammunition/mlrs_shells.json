@@ -1,19 +1,15 @@
+
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "superbwarfare:vehicle_assembling",
   "category": "misc",
-  "pattern": [
-    " A ",
-    "BCB",
-    " D "
+  "inputs": [
+    "superbwarfare:fusee",
+    "2 #forge:ingots/iron",
+    "superbwarfare:high_energy_explosives",
+    "superbwarfare:grain"
   ],
-  "key": {
-    "A": { "item": "superbwarfare:fusee" },
-    "B": { "tag": "forge:ingots/iron" },
-    "C": { "item": "superbwarfare:high_energy_explosives" },
-    "D": { "item": "superbwarfare:grain" }
-  },
   "result": {
     "item": "mcsp:mlrs_shells",
-    "count": 4
+    "count": 1
   }
 }

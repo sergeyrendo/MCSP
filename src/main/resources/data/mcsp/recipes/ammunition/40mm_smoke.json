@@ -1,0 +1,13 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "superbwarfare:primer",
+    "2 #forge:ingots/steel",
+    "superbwarfare:grain"
+  ],
+  "result": {
+    "item": "mcsp:40mm_smoke",
+    "count": 4
+  }
+}

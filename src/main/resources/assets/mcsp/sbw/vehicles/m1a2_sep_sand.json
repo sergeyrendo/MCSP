@@ -2,8 +2,6 @@
   "ID": "mcsp:m1a2_sep_sand",
   "Model": {
     "Model": "mcsp:geo/m1a2_sep.geo.json",
-    "LODModel": ["mcsp:geo/vehicle_lod/m1a2_sep_lod1.geo.json"],
     "Texture": "mcsp:textures/entity/m1a2_sand.png"
-  },
-  "LODDistance": [23]
+  }
 }

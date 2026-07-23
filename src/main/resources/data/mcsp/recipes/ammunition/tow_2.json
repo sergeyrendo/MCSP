@@ -1,17 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "superbwarfare:vehicle_assembling",
   "category": "misc",
-  "pattern": [
-    " A ",
-    "BCB",
-    " D "
+  "inputs": [
+    "superbwarfare:seeker",
+    "2 #forge:ingots/iron",
+    "superbwarfare:ap_head",
+    "superbwarfare:missile_engine"
   ],
-  "key": {
-    "A": { "item": "superbwarfare:seeker" },
-    "B": { "tag": "forge:ingots/iron" },
-    "C": { "item": "superbwarfare:ap_head" },
-    "D": { "item": "superbwarfare:missile_engine" }
-  },
   "result": {
     "item": "mcsp:tow_2",
     "count": 1

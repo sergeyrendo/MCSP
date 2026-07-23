@@ -1,16 +1,10 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "superbwarfare:vehicle_assembling",
   "category": "misc",
-  "pattern": [
-    "A",
-    "B",
-    "C"
+  "inputs": [
+    "superbwarfare:ap_head",
+    "superbwarfare:grain"
   ],
-  "key": {
-    "A": { "item": "superbwarfare:ap_head" },
-    "B": { "item": "superbwarfare:grain" },
-    "C": { "item": "superbwarfare:fusee" }
-  },
   "result": {
     "item": "mcsp:125mm_ap",
     "count": 1

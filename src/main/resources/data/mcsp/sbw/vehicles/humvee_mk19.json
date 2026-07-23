@@ -98,8 +98,8 @@
       "AmmoType": "mcsp:40mm_explosive",
       "RPM": 250,
       "Velocity": 8,
-      "Damage": 30,
-      "ExplosionDamage": 30,
+      "Damage": 20,
+      "ExplosionDamage": 20,
       "ExplosionRadius": 4,
       "Gravity": 0.05,
       "Spread": 0.5,
@@ -128,59 +128,35 @@
     "JavelinMissile": {
       "Name": "TOW-2 ATGM",
       "Icon": "mcsp:textures/icon_gun/tow-2.png",
-      "Projectile": "mcsp:vehicle_javelin_missile_top",
       "DefaultFireMode": "Semi",
       "AvailableFireModes": "Semi",
-      "AmmoType": [
-        {
-          "Ammo": "mcsp:tow_2",
-          "Projectile": "mcsp:vehicle_javelin_missile_top",
-          "Override": {
-            "Name": "TOW-2 ATGM (Top)",
-            "Icon": "mcsp:textures/icon_gun/tow-2.png"
-          }
-        },
-        {
-          "Ammo": "mcsp:tow_2",
-          "Projectile": "mcsp:vehicle_javelin_missile_dir",
-          "Override": {
-            "Name": "TOW-2 ATGM (Dir)",
-            "Icon": "mcsp:textures/icon_gun/tow-2.png"
-          }
-        }
-      ],
-      "RPM": 12,
+      "Projectile": "superbwarfare:wire_guide_missile",
+      "AmmoType": "mcsp:tow_2",
+      "Magazine": 1,
+      "EmptyReloadTime": 160,
+      "DefaultZoom": 3,
       "Velocity": 3,
       "Damage": 500,
       "ExplosionDamage": 120,
       "ExplosionRadius": 9,
-      "DefaultZoom": 3,
-      "SeekWeaponInfo": {
-        "SeekDirection": "Barrel",
-        "SeekRange": 256,
-        "SeekAngle": 10,
-        "SeekTime": 20,
-        "MaxTargetHeight": 64,
-        "MinTargetSize": 0.5,
-        "OnlyLockEntity": true
-      },
-      "SeekType": "HoldFire",
-      "ShootPos": {
-        "Transform": "Barrel",
-        "Positions": [[-0.46875, 0, 1]],
-        "Directions": ["Barrel"]
-      },
+      "Spread": 0.5,
+      "HeatPerShoot": 0.5,
+      "RecoilTime": 18,
+      "RecoilForce": 0.05,
+      "Crosshair": "@VehicleCommonMissile",
+      "CrosshairColor": "0xFFC700",
+      "SoundRadius": 12,
       "SoundInfo": {
         "Fire1P": "superbwarfare:javelin_fire_1p",
         "Fire3P": "superbwarfare:javelin_fire_3p",
         "Fire3PFar": "superbwarfare:javelin_far",
-        "Change": "superbwarfare:into_missile",
-        "Locking": "superbwarfare:javelin_locking",
-        "Locked": "superbwarfare:javelin_locked"
+        "Change": "superbwarfare:into_missile"
       },
-      "Crosshair": "@VehicleCommonSeekMissile",
-      "CrosshairColor": "0x00FF00",
-      "SoundRadius": 12
+      "ShootPos": {
+        "Transform": "Barrel",
+        "Positions": [[-0.46875, 0, 1]],
+        "Directions": ["Barrel"]
+      }
     }
   },
 

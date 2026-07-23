@@ -2,8 +2,6 @@
   "ID": "mcsp:t90a_tricolor",
   "Model": {
     "Model": "mcsp:geo/t-90a.geo.json",
-    "LODModel": ["mcsp:geo/vehicle_lod/t-90a_lod1.geo.json"],
     "Texture": "mcsp:textures/entity/t90a_camo.png"
-  },
-  "LODDistance": [23]
+  }
 }
