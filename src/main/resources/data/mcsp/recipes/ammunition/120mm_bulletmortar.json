@@ -1,0 +1,14 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "superbwarfare:fusee",
+    "2 #forge:ingots/steel",
+    "superbwarfare:high_energy_explosives",
+    "superbwarfare:grain"
+  ],
+  "result": {
+    "item": "mcsp:120mm_bulletmortar",
+    "count": 2
+  }
+}

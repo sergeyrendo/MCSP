@@ -2,8 +2,6 @@
   "ID": "mcsp:sprut",
   "Model": {
     "Model": "mcsp:geo/sprut.geo.json",
-    "LODModel": ["mcsp:geo/vehicle_lod/sprut_lod1.geo.json"],
     "Texture": "mcsp:textures/entity/sprut_green.png"
-  },
-  "LODDistance": [23]
+  }
 }

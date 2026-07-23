@@ -2,12 +2,6 @@
     "ID": "mcsp:zbd04a_green",
     "Model": {
         "Model": "mcsp:geo/zbd04.geo.json",
-        "LODModel": [
-            "mcsp:geo/vehicle_lod/zbd04_lod1.geo.json"
-        ],
         "Texture": "mcsp:textures/entity/zbd04a_green.png"
-    },
-    "LODDistance": [
-        23
-    ]
+    }
 }
