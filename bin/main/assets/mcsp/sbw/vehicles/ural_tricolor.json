@@ -1,0 +1,9 @@
+{
+  "ID": "mcsp:ural_tricolor",
+  "Model": {
+    "Model": "mcsp:geo/ural.geo.json",
+    "LODModel": ["mcsp:geo/vehicle_lod/ural_lod1.geo.json"],
+    "Texture": "mcsp:textures/entity/ural_camo.png"
+  },
+  "LODDistance": [23]
+}

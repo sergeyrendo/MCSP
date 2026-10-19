@@ -1,0 +1,7 @@
+{
+  "ID": "mcsp:sprut_camo",
+  "Model": {
+    "Model": "mcsp:geo/sprut.geo.json",
+    "Texture": "mcsp:textures/entity/sprut_camo.png"
+  }
+}

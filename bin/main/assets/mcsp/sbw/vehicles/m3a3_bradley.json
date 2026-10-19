@@ -1,0 +1,7 @@
+{
+  "ID": "mcsp:m3a3_bradley",
+  "Model": {
+    "Model": "mcsp:geo/m3a3.geo.json",
+    "Texture": "mcsp:textures/entity/m3a3_texture.png"
+  }
+}

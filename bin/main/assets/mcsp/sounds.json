@@ -1,0 +1,220 @@
+{
+  "wheel_step": {
+    "sounds": [
+      "minecraft:block.gravel.step"
+    ]
+  },
+  "yx_100_fire_1p": {
+    "sounds": [
+      "minecraft:entity.generic.explode"
+    ]
+  },
+  "yx_100_fire_3p": {
+    "sounds": [
+      "minecraft:entity.generic.explode"
+    ]
+  },
+  "yx_100_far": {
+    "sounds": [
+      "minecraft:entity.generic.explode"
+    ]
+  },
+  "yx_100_veryfar": {
+    "sounds": [
+      "minecraft:entity.generic.explode"
+    ]
+  },
+  "yx_100_reload": {
+    "sounds": [
+      "minecraft:block.iron_door.close"
+    ]
+  },
+  "taifun_engine": {
+    "sounds": [
+      "mcsp:taifun_engine"
+    ]
+  },
+  "vdv_cannon_fire_1p": {
+    "sounds": [
+      "mcsp:vdv_cannon_fire_1p"
+    ]
+  },
+  "vdv_cannon_fire_3p": {
+    "sounds": [
+      "mcsp:vdv_cannon_fire_3p"
+    ]
+  },
+  "vdv_cannon_fire_far": {
+    "sounds": [
+      "mcsp:vdv_cannon_fire_far"
+    ]
+  },
+  "vdv_cannon_fire_veryfar": {
+    "sounds": [
+      "mcsp:vdv_cannon_fire_veryfar"
+    ]
+  },
+  "smoke_fire": {
+    "sounds": [
+      "mcsp:smoke_fire"
+    ]
+  },
+  "bradley_engine": {
+    "sounds": [
+      "mcsp:bradley_engine"
+    ]
+  },
+  "1p25mm_1": {
+    "sounds": [
+      "mcsp:1p25mm_1"
+    ]
+  },
+  "3p25mm_1": {
+    "sounds": [
+      "mcsp:3p25mm_1"
+    ]
+  },
+  "3p25mm_1m": {
+    "sounds": [
+      "mcsp:3p25mm_1m"
+    ]
+  },
+  "3p25mm_1f": {
+    "sounds": [
+      "mcsp:3p25mm_1f"
+    ]
+  },
+  "m242_fire_1p": {
+    "sounds": [
+      "mcsp:1p25mm_1"
+    ]
+  },
+  "m242_fire_3p": {
+    "sounds": [
+      "mcsp:3p25mm_1m"
+    ]
+  },
+  "m242_fire_far": {
+    "sounds": [
+      "mcsp:3p25mm_1f"
+    ]
+  },
+  "bradley_turret_reload": {
+    "sounds": [
+      "mcsp:turret_reload_bradley"
+    ]
+  },
+  "zoom_in": {
+    "sounds": [
+      "mcsp:zoom_in"
+    ]
+  },
+  "zoom_out": {
+    "sounds": [
+      "mcsp:zoom_out"
+    ]
+  },
+  "120_1p": {
+    "sounds": [
+      "mcsp:120_1p"
+    ]
+  },
+  "120_3p": {
+    "sounds": [
+      "mcsp:120_3p"
+    ]
+  },
+  "120_3p_mid": {
+    "sounds": [
+      "mcsp:120_3p_mid"
+    ]
+  },
+  "120_3p_far": {
+    "sounds": [
+      "mcsp:120_3p_far"
+    ]
+  },
+  "abrams_engine": {
+    "sounds": [
+      "mcsp:abrams_engine"
+    ]
+  },
+  "turret_reload0": {
+    "sounds": [
+      "mcsp:turret_reload0"
+    ]
+  },
+  "120_reload": {
+    "sounds": [
+      {
+        "name": "mcsp:120_reload",
+        "volume": 0.5
+      }
+    ]
+  },
+  "2a42_30mm_firing_outside_distant0": {
+    "sounds": [
+      "mcsp:2a42_30mm_firing_outside_distant0"
+    ]
+  },
+  "2a42_30mm_firing_outside0": {
+    "sounds": [
+      "mcsp:2a42_30mm_firing_outside0"
+    ]
+  },
+  "2a42_c1": {
+    "sounds": [
+      "mcsp:2a42_c1"
+    ]
+  },
+  "ags30_fire_far_01": {
+    "sounds": [
+      "mcsp:ags30_fire_far_01"
+    ]
+  },
+  "ags30_fire_initial_01": {
+    "sounds": [
+      "mcsp:ags30_fire_initial_01"
+    ]
+  },
+  "ags30_fire_inside_initial_01": {
+    "sounds": [
+      "mcsp:ags30_fire_inside_initial_01"
+    ]
+  },
+  "ags30_fire_mid_01": {
+    "sounds": [
+      "mcsp:ags30_fire_mid_01"
+    ]
+  },
+  "bmp3_reload": {
+    "sounds": [
+      "mcsp:bmp3_reload"
+    ]
+  },
+  "coax7mm_firing_distant0": {
+    "sounds": [
+      "mcsp:coax7mm_firing_distant0"
+    ]
+  },
+  "coax7mm_firing_moredistant0": {
+    "sounds": [
+      "mcsp:coax7mm_firing_moredistant0"
+    ]
+  },
+  "coax7mm_firing0": {
+    "sounds": [
+      "mcsp:coax7mm_firing0"
+    ]
+  },
+  "coax7mm_reloading": {
+    "sounds": [
+      "mcsp:coax7mm_reloading"
+    ]
+  },
+  "atgm_launch": {
+    "sounds": [
+      "mcsp:atgm_launch"
+    ]
+  }
+}

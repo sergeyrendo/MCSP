@@ -1,0 +1,7 @@
+{
+  "ID": "mcsp:t80bv_camo",
+  "Model": {
+    "Model": "mcsp:geo/t80_bv.geo.json",
+    "Texture": "mcsp:textures/entity/t80_camo.png"
+  }
+}

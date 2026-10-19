@@ -1,0 +1,7 @@
+{
+  "ID": "mcsp:m1a2",
+  "Model": {
+    "Model": "mcsp:geo/m1a2.geo.json",
+    "Texture": "mcsp:textures/entity/m1a2.png"
+  }
+}

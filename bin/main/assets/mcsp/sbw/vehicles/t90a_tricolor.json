@@ -1,0 +1,7 @@
+{
+  "ID": "mcsp:t90a_tricolor",
+  "Model": {
+    "Model": "mcsp:geo/t-90a.geo.json",
+    "Texture": "mcsp:textures/entity/t90a_camo.png"
+  }
+}

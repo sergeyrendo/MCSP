@@ -1,0 +1,7 @@
+{
+  "ID": "mcsp:m3a3_bradley_busk_ii_sand",
+  "Model": {
+    "Model": "mcsp:geo/m3a3_busk_ii.geo.json",
+    "Texture": "mcsp:textures/entity/m3a3_texture_sand.png"
+  }
+}

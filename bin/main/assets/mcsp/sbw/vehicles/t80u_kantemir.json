@@ -1,0 +1,7 @@
+{
+  "ID": "mcsp:t80u_kantemir",
+  "Model": {
+    "Model": "mcsp:geo/t80_u.geo.json",
+    "Texture": "mcsp:textures/entity/t80_kantemir.png"
+  }
+}

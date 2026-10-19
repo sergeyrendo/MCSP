@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "mcsp:item/t80bv_pixel"
+  }
+}

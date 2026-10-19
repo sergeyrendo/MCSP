@@ -1,0 +1,7 @@
+{
+  "ID": "mcsp:t80bv_green",
+  "Model": {
+    "Model": "mcsp:geo/t80_bv.geo.json",
+    "Texture": "mcsp:textures/entity/t80_green.png"
+  }
+}
