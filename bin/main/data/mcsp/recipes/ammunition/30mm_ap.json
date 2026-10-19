@@ -1,0 +1,15 @@
+
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "superbwarfare:tungsten_rod",
+    "2 #forge:ingots/copper",
+    "minecraft:gunpowder",
+    "superbwarfare:primer"
+  ],
+  "result": {
+    "item": "mcsp:30mm_ap",
+    "count": 8
+  }
+}

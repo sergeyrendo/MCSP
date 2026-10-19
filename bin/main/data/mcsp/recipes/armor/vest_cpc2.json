@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "a": {
+      "tag": "superbwarfare:ingots/cemented_carbide"
+    },
+    "b": {
+      "tag": "forge:dyes/black"
+    },
+    "c": {
+      "item": "superbwarfare:armor_plate"
+    }
+  },
+  "pattern": [
+    "aba",
+    "aca",
+    "aaa"
+  ],
+  "result": {
+    "item": "mcsp:vest_cpc2"
+  }
+}

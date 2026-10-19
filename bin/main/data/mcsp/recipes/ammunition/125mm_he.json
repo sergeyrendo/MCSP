@@ -1,0 +1,12 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "superbwarfare:he_head",
+    "superbwarfare:grain"
+  ],
+  "result": {
+    "item": "mcsp:125mm_he",
+    "count": 1
+  }
+}

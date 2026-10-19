@@ -1,0 +1,16 @@
+
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "forge:ingots/steel",
+    "forge:plates/copper",
+    "minecraft:gunpowder",
+    "superbwarfare:primer"
+  ],
+  "result": {
+    "item": "mcsp:bullet672",
+    "count": 32
+  }
+}
+

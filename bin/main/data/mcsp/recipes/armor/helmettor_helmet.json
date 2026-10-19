@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "a": {
+      "tag": "superbwarfare:ingots/cemented_carbide"
+    },
+    "b": {
+      "tag": "forge:dyes/green"
+    },
+    "c": {
+      "item": "superbwarfare:armor_plate"
+    },
+    "g": {
+      "tag": "forge:glass_panes"
+    }
+  },
+  "pattern": [
+    "aca",
+    "gbg"
+  ],
+  "result": {
+    "item": "mcsp:helmettor_helmet"
+  }
+}

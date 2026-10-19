@@ -1,0 +1,15 @@
+
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "superbwarfare:fusee",
+    "2 #forge:ingots/iron",
+    "superbwarfare:high_energy_explosives",
+    "superbwarfare:grain"
+  ],
+  "result": {
+    "item": "mcsp:mlrs_shells",
+    "count": 1
+  }
+}

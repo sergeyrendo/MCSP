@@ -1,0 +1,14 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "superbwarfare:seeker",
+    "2 #forge:ingots/iron",
+    "superbwarfare:ap_head",
+    "superbwarfare:missile_engine"
+  ],
+  "result": {
+    "item": "mcsp:tow_2",
+    "count": 1
+  }
+}

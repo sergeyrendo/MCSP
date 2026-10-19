@@ -1,0 +1,12 @@
+{
+  "type": "superbwarfare:vehicle_assembling",
+  "category": "misc",
+  "inputs": [
+    "superbwarfare:ap_head",
+    "superbwarfare:grain"
+  ],
+  "result": {
+    "item": "mcsp:125mm_ap",
+    "count": 1
+  }
+}
